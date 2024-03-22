@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Chart</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Select element for choosing time period -->
+    <label for="timePeriod">Select Time Period:</label>
+    <select id="timePeriod" onchange="updateChart()">
+        <option value="week">This Week</option>
+        <option value="month">This Month</option>
+        <option value="year">This Year</option>
+    </select>
+
+    <!-- Canvas for displaying chart -->
+    <canvas id="ordersChart" width="400" height="200"></canvas>
+
+    <script>
+        // Sample data for orders
+        const ordersData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Number of Orders',
+                data: [10, 20, 15, 25, 30, 35],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // Configure chart options
+        const chartOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Get chart canvas element
+        const ordersChartCanvas = document.getElementById('ordersChart').getContext('2d');
+
+        // Create the initial chart
+        const ordersChart = new Chart(ordersChartCanvas, {
+            type: 'line',
+            data: ordersData,
+            options: chartOptions
+        });
+
+        // Function to update the chart based on selected time period
+        function updateChart() {
+            const timePeriod = document.getElementById('timePeriod').value;
+
+            // Update chart data and labels based on selected time period (sample code)
+            // You will need to replace this with your actual data retrieval logic
+            let newData = [];
+            let newLabels = [];
+            if (timePeriod === 'week') {
+                newData = [5, 10, 15, 20, 25, 30, 35];
+                newLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+            } else if (timePeriod === 'month') {
+                newData = [20, 25, 30, 35, 40, 45, 50];
+                newLabels = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+            } else if (timePeriod === 'year') {
+                newData = [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650];
+                newLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            }
+
+            // Update chart data and redraw
+            ordersChart.data.labels = newLabels;
+            ordersChart.data.datasets[0].data = newData;
+            ordersChart.update();
+        }
+    </script>
+</body>
+</html>

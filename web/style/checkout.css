@@ -1,0 +1,90 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 8, 2024, 10:24:43 AM
+    Author     : asus
+*/
+
+input, label {
+    margin: 5px 5px;
+}
+
+.form-group {
+    margin: 30px auto;
+    width: 450px;
+}
+
+.form-control {
+    float: left;
+}
+
+#inputStreet {
+    width: 100%;
+}
+
+#inputCity {
+    width: 50%;
+}
+
+#inputState {
+    width: 15%;
+}
+
+#inputZip {
+    width: 28.3%;
+}
+
+#inputCounty {
+    width: 47%;
+}
+
+#inputCountry {
+    width: 48%;
+}
+
+.tooltip{
+    position: relative;
+    width: 120px;
+}
+
+.form-check-input:disabled~.form-check-label, .form-check-input[disabled]~.form-check-label {
+    cursor: default;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    opacity: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+

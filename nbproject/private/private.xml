@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/java/controller/ResetPasswordServlet.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>51</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/java/dal/OrderDAO.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>394</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/learning_material/PRJ301/Project/web/admin_order.jsp</file>
+            <file>file:/D:/learning_material/PRJ301/Project/src/java/dal/OrderDAO.java</file>
+            <file>file:/D:/learning_material/PRJ301/Project/web/book-detail.jsp</file>
+            <file>file:/D:/learning_material/PRJ301/Project/src/java/controller/OrderServlet.java</file>
+            <file>file:/D:/learning_material/PRJ301/Project/web/books.jsp</file>
+            <file>file:/D:/learning_material/PRJ301/Project/src/java/filter/RouterFilter.java</file>
+            <file>file:/D:/learning_material/PRJ301/Project/src/java/controller/ResetPasswordServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
